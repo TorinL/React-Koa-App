@@ -9750,6 +9750,37 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var Welcome = function Welcome(props) {
+  return _react2.default.createElement(
+    'h1',
+    null,
+    'Hi ',
+    props.name
+  );
+};
+
+var App = function App() {
+  var nameArray = ["Torin", "Cayla", "Marple"];
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(
+      'ul',
+      null,
+      nameArray.map(function (name) {
+        return _react2.default.createElement(
+          'li',
+          null,
+          name
+        );
+      })
+    ),
+    _react2.default.createElement(Welcome, { name: 'Torin' })
+  );
+};
+
+_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('app'));
+
 /***/ }),
 /* 82 */
 /***/ (function(module, exports, __webpack_require__) {
