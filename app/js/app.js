@@ -1,24 +1,20 @@
 import React from 'react';
-import ReactDom from 'react-dom'
+import ReactDom from 'react-dom';
 
+import NameThis from './components/NameThis';
+import Welcome from './components/Welcome'
 
-const Welcome = ((props) =>
-<h1>Hi {props.name}</h1>
-)
+class App extends React.Component {
 
-const App = (() => {
-  const nameArray = ["Torin", "Cayla", "Marple"]
-  return (
-    <div>
-      <ul>
-        {nameArray.map(name =>
-          <li>{name}</li>
-        )}
-      </ul>
-      <Welcome name="Torin" />
-    </div>
-  )
-})
+  render(){
+    return (
+      <div>
+        <NameThis />
+        <Welcome />
+      </div>
+    )
+  }
+}
 
 ReactDom.render(
   <App />,
