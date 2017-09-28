@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 
 import NameThis from './components/NameThis';
-import Welcome from './components/Welcome'
+import Welcome from './components/Welcome';
 
 class App extends React.Component {
 
